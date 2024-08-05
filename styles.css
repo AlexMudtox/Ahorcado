@@ -1,7 +1,24 @@
+body {
+    background-color: #7a2c14;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.honk-letra {
+    font-family: "Honk", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "MORF" 15,
+        "SHLN" 50;
+}
 #startButton {
     margin-top: 20px;
     appearance: none;
-    font-family: 'SF Pixelate', sans-serif;
     border: none;
     width: 300px;
     padding: 10px;
