@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,7 +10,28 @@
     <header>
       <h1>El Ahorcado</h1>
     </header>
-    <button id="startButton">START</button>
+    <div id="game-container">
+      <h2>Adivina la Palabra</h2>
+      <div id="hangman-container">
+        <canvas id="hangman-canvas" width="250" height="250"></canvas>
+      </div>
+      <div id="word-container"></div>
+      <div id="letters-container"></div>
+      <div id="message"></div>
+      <button id="startButton">START</button>
+    </div>
+    <footer>
+      <p>Reglas del Juego</p>
+      <ul>
+        <li>Elige letras para adivinar la palabra oculta.</li>
+        <li>Tienes 6 intentos para adivinar la palabra completa.</li>
+        <li>Por cada letra incorrecta, se dibujará una parte del ahorcado.</li>
+        <li>
+          Gana el juego si adivinas todas las letras antes de que se complete el
+          dibujo del ahorcado.
+        </li>
+      </ul>
+    </footer>
     <script src="script.js"></script>
   </body>
 </html>

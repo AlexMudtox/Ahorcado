@@ -1,3 +1,9 @@
+
+
+
+
+
+
 const startButton = document.getElementById('startButton');
 const startGame = () => {
     usedLetters = [];
