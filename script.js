@@ -27,6 +27,7 @@ const messageElement = document.getElementById("message");
 const restartButton = document.getElementById("restart-button");
 
 // Lo del dibujo lo añadimos luego, referencia al canvas.
+//const ctx = hangmanCanvas.getContext('2d'); --esto es para el canvas--
 
 /*Empezar con una Funcion que actualice el
  contenedor de la palabra con las 
