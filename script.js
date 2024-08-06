@@ -33,11 +33,28 @@ const restartButton = document.getElementById("restart-button");
  letras correctas adivinadas y guiones bajos para las letras no adivinadas.*/
 
 //Lo meti en la variable directamente de palabra seleccionada.
+
+function initializeGame() {
+  chosenWord = palabras[Math.floor(Math.random() * palabras.length)];
+  guessedLetters = [];
+  wrongGuesses = 0;
+  wordContainer.innerHTML = "";
+  messageContainer.innerHTML = "";
+  document.removeEventListener('keydown', handleKeyPress);
+  }
+
+  for (let i = 0; i < chosenWord.length; i++) {
+      const span = document.createElement("span");
+      span.textContent = "_";
+      wordContainer.appendChild(span);
+  }
+
 function randomWord() {
   respuesta = palabras[Math.floor(Math.random() * palabras.length)];
 }
 startButton.addEventListener("click", startGame);
-
+// selecciona una palabra aleatoria de la lista y guarda las letras que el jugador adivina
+// muestra las palabras ocultas con una _ 
 /*const startButton = document.getElementById('startButton');
 const startGame = () => {
     usedLetters = [];
