@@ -135,8 +135,8 @@ function reiniciar() {
 
 // dibujar ahorcado
 function dibujarAhorcado() {
-  context.lineWidth = 2; // Establece el grosor de las líneas
-  context.strokeStyle = "#F55B14"; // Establece el color de las líneas
+  context.lineWidth = 4; // Establece el grosor de las líneas
+  context.strokeStyle = "#00000"; // Establece el color de las líneas
 
   switch (maxWrong) {
     case 5:
