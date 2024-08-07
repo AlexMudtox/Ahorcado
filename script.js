@@ -32,6 +32,7 @@ const restartButton = document.getElementById("restart-button");
  contenedor de la palabra con las 
  letras correctas adivinadas y guiones bajos para las letras no adivinadas.*/
 
+
 //Lo meti en la variable directamente de palabra seleccionada.
 
 function initializeGame() {
@@ -45,6 +46,16 @@ function initializeGame() {
 
   for (let i = 0; i < chosenWord.length; i++) {
       const span = document.createElement("span");
+   // Agregar un listener para manejar eventos de teclado
+   document.addEventListener('keydown', handleKeyPress);
+
+   // Ocultar el botón de inicio y reiniciar el botón si es necesario
+  startButton.style.display = 'none';
+  restartButton.style.display = 'none';
+
+  // Configurar el canvas para el dibujo del ahorcado
+  drawHangman();
+
       span.textContent = "_";
       wordContainer.appendChild(span);
   }
@@ -68,3 +79,4 @@ const startGame = () => {
     drawWord();
     document.addEventListener('keydown', letterEvent);
 };*/
+
