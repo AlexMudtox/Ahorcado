@@ -4,27 +4,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Honk&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Honk&display=swap" rel="stylesheet">
     <title>Proyecto Ahorcado</title>
   </head>
   <body>
     <header>
-      <h1>El Ahorcado</h1>
+      <h1><element class="honk-letra">El Ahorcado</element></h1>
     </header>
     <div id="game-container">
       <h2>Adivina la Palabra</h2>
       <div id="hangman-container">
         <canvas id="hangman-canvas" width="250" height="250"></canvas>
       </div>
-      <div id="word-container" ></div>
+      <div id="word-container"></div>
       <div id="letters-container"></div>
       <div id="message"></div>
-      <button id="restart-button">START</button>
+      <button id="startButton">START</button>
     </div>
     <footer>
       <p>Reglas del Juego</p>
@@ -40,4 +37,5 @@
     </footer>
     <script src="script.js"></script>
   </body>
+  
 </html>
