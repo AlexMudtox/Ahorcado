@@ -28,10 +28,10 @@ const restartButton = document.getElementById("restart-button");
 
 // Lo del dibujo lo añadimos luego, referencia al canvas.
 
-
 /*Empezar con una Funcion que actualice el
  contenedor de la palabra con las 
  letras correctas adivinadas y guiones bajos para las letras no adivinadas.*/
+
 
 //Lo meti en la variable directamente de palabra seleccionada.
 
@@ -46,10 +46,6 @@ function initializeGame() {
 
   for (let i = 0; i < chosenWord.length; i++) {
       const span = document.createElement("span");
-      span.textContent = "_";
-      wordContainer.appendChild(span);
-  }
-
    // Agregar un listener para manejar eventos de teclado
    document.addEventListener('keydown', handleKeyPress);
 
@@ -60,7 +56,9 @@ function initializeGame() {
   // Configurar el canvas para el dibujo del ahorcado
   drawHangman();
 
-
+      span.textContent = "_";
+      wordContainer.appendChild(span);
+  }
 
 function randomWord() {
   respuesta = palabras[Math.floor(Math.random() * palabras.length)];
