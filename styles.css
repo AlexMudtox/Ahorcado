@@ -1,32 +1,86 @@
 body {
-    background-color: #faff00;
-        background-image: linear-gradient(319deg, #faff00 0%, #ff1000 37%, #ff6a00 100%);
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  background-color: #faff00;
+  background-image: linear-gradient(
+    319deg,
+    #faff00 0%,
+    #ff1000 37%,
+    #ff6a00 100%
+  );
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  margin: 0;
 }
 
-.honk-letra {
-    font-family: "Honk", system-ui;
-    font-optical-sizing: auto;
+header h1 {
+  font-family: "Honk", system-ui;
+  font-size: 2.5em;
+  margin: 0;
+}
+
+#game-container {
+  text-align: center;
+}
+
+#hangman-container {
+  margin: 20px ;
+}
+
+#word-container {
+    font-size: 24px;
+    letter-spacing: 10px;
+    margin-bottom: 20px;
+}
+
+
+#letters-container {
+  margin: 20px 0;
+}
+
+#letters-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+
+.letra {
+    font-size: 20px;
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid #000;
+    cursor: pointer;
+    user-select: none;
+    font-family: "Bungee Spice", sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-variation-settings:
-        "MORF" 15,
-        "SHLN" 50;
 }
-#startButton {
-    margin-top: 20px;
-    appearance: none;
-    border: none;
-    width: 300px;
-    padding: 10px;
-    background: #4169eb;
+
+.letra.correcto {
+    background-color: #4caf50;
     color: #fff;
-    font-weight: 600;
-    font-size: 20px;
-    border-radius: 4px;
-    cursor: pointer;
+}
+
+.letra.incorrecto{
+    background-color: #f44336;
+    color: #fff;
+}
+
+#restart-button {
+  margin-top: 20px;
+  appearance: none;
+  border: none;
+  width: 300px;
+  padding: 10px 20px;
+  background: #b25114;
+  color: #fff;
+  font-weight: 600;
+  font-size: 20px;
+  border-radius: 4px;
+  cursor: pointer;
 }
