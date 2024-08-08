@@ -92,9 +92,8 @@ function siHaPerdido() {
   }
 }
 
-/*Maneja el evento del click de la letra, obtiene la letra clickada, 
-verifica si la letra no ha sido adivinada previamente,
-agrega la letra al array "guesssedletters", si la lera esta la agrega a correctletters,
+/*Maneja el evento del click de la letra, verifica si la letra no ha sido adivinada previamente,
+agrega la letra al array "guesssedletters", si la letra esta la agrega a correctletters,
 si no esta resta intentos, luego actualiza ls visualizacion de la palabra y las letras   */
 
 function handleLetterClick(event) {
@@ -190,8 +189,6 @@ function dibujarAhorcado() {
 function resetearCanvas() {
   context.clearRect(0, 0, canvas.width, canvas.height);
   context.beginPath();
-  /*context.lineWidth = 2; // Establece el grosor de las líneas
-  context.strokeStyle = "#000"; // Establece el color de las líneas*/
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -202,48 +199,3 @@ document.addEventListener("DOMContentLoaded", () => {
   resetearCanvas();
 })
 
-
-/*function initializeGame() {
-  chosenWord = palabras[Math.floor(Math.random() * palabras.length)];
-  guessedLetters = [];
-  wrongGuesses = 0;
-  wordContainer.innerHTML = "";
-  messageContainer.innerHTML = "";
-  document.removeEventListener("keydown", handleKeyPress);
-}
-
-for (let i = 0; i < chosenWord.length; i++) {
-  const span = document.createElement("span");
-  // Agregar un listener para manejar eventos de teclado
-  document.addEventListener("keydown", handleKeyPress);
-
-  // Ocultar el botón de inicio y reiniciar el botón si es necesario
-  startButton.style.display = "none";
-  restartButton.style.display = "none";
-
-  // Configurar el canvas para el dibujo del ahorcado
-  drawHangman();
-
-  span.textContent = "_";
-  wordContainer.appendChild(span);
-}
-
-function randomWord() {
-  respuesta = palabras[Math.floor(Math.random() * palabras.length)];
-}
-startButton.addEventListener("click", startGame);
-// selecciona una palabra aleatoria de la lista y guarda las letras que el jugador adivina
-// muestra las palabras ocultas con una _
-/*const startButton = document.getElementById('startButton');
-const startGame = () => {
-    usedLetters = [];
-    mistakes = 0;
-    hits = 0;
-    wordContainer.innerHTML = '';
-    usedLettersElement.innerHTML = '';
-    startButton.style.display = 'none';
-    drawHangMan();
-    selectRandomWord();
-    drawWord();
-    document.addEventListener('keydown', letterEvent);
-};*/
